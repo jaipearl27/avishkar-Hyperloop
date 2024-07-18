@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-///// pages /////
+import React from "react";
 
 import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
-// import ComingSoon from "./pages/NotFound/ComingSoon";
 import NotFound from "./pages/NotFound/NotFound";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = () => {
 
