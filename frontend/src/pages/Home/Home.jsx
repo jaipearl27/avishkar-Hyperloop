@@ -16,16 +16,15 @@ const Home = () => {
   const dContainerRef = useRef(null);
   const leftTextRef = useRef(null);
   const rightTextRef = useRef(null);
-  const textRevealsRefs = useRef([]);
+  // const textRevealsRefs = useRef([]);
 
   const [projects, setProjects] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);
 
   // Use useRef for projectCurrentX
   const projectCurrentX = useRef(0);
-  const limit = useRef(0);
+  const limit = useRef();
   const percentages = useRef(0);
-
 
   useEffect(() => {
     createProjects();
@@ -36,9 +35,10 @@ const Home = () => {
       scrollCircle();
       scrollDiscover();
     };
+    animate();
     mainRef.current.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", setLimit);
-    animate();
+    
 
     return () => {
       mainRef.current.removeEventListener("scroll", handleScroll);
@@ -49,7 +49,62 @@ const Home = () => {
   const createProjects = () => {
     // Your projects array here
     const projectsData = [
-      // Add your project data here
+      {
+        name: "PROJECT ONE",
+        type: "WEB DESIGN",
+        pos: "start",
+        image:
+          "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 2",
+        type: "GRAPHIC DESIGN",
+        pos: "mid",
+        image:
+          "https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2952&q=80",
+      },
+      {
+        name: "PROJECT 3",
+        type: "TYPE DESIGN",
+        pos: "end",
+        image:
+          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 4",
+        type: "WEB DESIGN",
+        pos: "mid",
+        image:
+          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2564&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 5",
+        type: "WEB DESIGN",
+        pos: "end",
+        image:
+          "https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 6",
+        type: "GRAPHIC DESIGN",
+        pos: "mid",
+        image:
+          "https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 7",
+        type: "WEB DESIGN",
+        pos: "start",
+        image:
+          "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        name: "PROJECT 8",
+        type: "TYPE DESIGN",
+        pos: "end",
+        image:
+          "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
     ];
     setProjects(projectsData);
   };
@@ -57,7 +112,24 @@ const Home = () => {
   const createBlogposts = () => {
     // Your blog posts array here
     const blogPostsData = [
-      // Add your blog posts data here
+      {
+        title: "BLOG POST ONE",
+        time: "3 MIN",
+        image:
+          "https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "BLOG POST TWO",
+        time: "4 MIN",
+        image:
+          "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "BLOG POST THREE",
+        time: "5 MIN",
+        image:
+          "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
     ];
     setBlogPosts(blogPostsData);
   };
@@ -77,9 +149,16 @@ const Home = () => {
   const animateProjects = () => {
     const offsetTop = projectsStickyRef.current.parentElement.offsetTop;
     let percentage = ((mainRef.current.scrollTop - offsetTop) / window.innerHeight) * 100;
-    percentage = percentage < 0 ? 0 : percentage > limit.current ? limit.current : percentage;
+    
+    percentage = percentage <= 0 ? 0 : percentage > limit.current ? limit.current : percentage;
+    
+    console.log(percentage, limit.current)
     let projectTargetX = percentage;
-    projectCurrentX.current = lerp(projectCurrentX.current, projectTargetX, 0.1);
+    projectCurrentX.current = lerp(
+      projectCurrentX.current,
+      projectTargetX,
+      0.4
+    );
     projectSliderRef.current.style.transform = `translate3d(${-projectCurrentX.current}vw, 0 , 0)`;
   };
 
@@ -129,19 +208,28 @@ const Home = () => {
         : percentages.current.large;
   };
 
+  const avishkar = "Avishkar".split("");
+  const hyperloop = "Hyperloop".split("");
+
   return (
     <div>
-      <div className="line__container">
-        <div className="separator"></div>
-        <div className="separator"></div>
-        <div className="separator"></div>
-      </div>
       <main ref={mainRef}>
         <div className="scroll__container">
           <section id="hero">
             <div className="hero__container">
               <div className="hero__title">
-                <h1 className="hero__title__header text__reveal">Avishkar Hyperloop</h1>
+                <div className="hero__title__header text__reveal">
+                  <div>
+                    {avishkar.map((char) => (
+                      <span>{char}</span>
+                    ))}
+                  </div>
+                  <div>
+                    {hyperloop.map((char) => (
+                      <span>{char}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
               {/* <div className="hero__cta">
                 <h4>STUDIO</h4>
