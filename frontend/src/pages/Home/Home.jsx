@@ -38,7 +38,7 @@ const Home = () => {
     animate();
     mainRef.current.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", setLimit);
-    
+
 
     return () => {
       mainRef.current.removeEventListener("scroll", handleScroll);
@@ -50,60 +50,78 @@ const Home = () => {
     // Your projects array here
     const projectsData = [
       {
-        name: "PROJECT ONE",
+        name: "Hon'ble Prime Minister interacts with the team!",
         type: "WEB DESIGN",
+        date: '08-Apr-2023',
         pos: "start",
         image:
-          "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM1.webp",
       },
       {
-        name: "PROJECT 2",
+        name: "Hon'ble Prime Minister interacts with the team!",
         type: "GRAPHIC DESIGN",
+        date: '08-Apr-2023',
         pos: "mid",
         image:
-          "https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2952&q=80",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM2.webp",
       },
       {
-        name: "PROJECT 3",
+        name: "Hon'ble Prime Minister interacts with the team!",
         type: "TYPE DESIGN",
+        date: '08-Apr-2023',
         pos: "end",
         image:
-          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM3.webp",
       },
       {
-        name: "PROJECT 4",
+        name: "The CEO of Daimler visits our workspace",
         type: "WEB DESIGN",
+        date: '30-Mar-2023',
         pos: "mid",
         image:
-          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2564&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit1.webp",
       },
       {
-        name: "PROJECT 5",
+        name: "The CEO of Daimler visits our workspace",
         type: "WEB DESIGN",
+        date: '30-Mar-2023',
         pos: "end",
         image:
-          "https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit2.webp",
       },
       {
-        name: "PROJECT 6",
+        name: "The CEO of Daimler visits our workspace",
         type: "GRAPHIC DESIGN",
+        date: '30-Mar-2023',
         pos: "mid",
         image:
-          "https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit3.webp",
       },
       {
-        name: "PROJECT 7",
+        name: "European Hyperloop Week 2023",
         type: "WEB DESIGN",
+        date: '17-July-2023 to 23-July-2023',
         pos: "start",
         image:
-          "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW1.webp",
       },
       {
-        name: "PROJECT 8",
+        name: "European Hyperloop Week 2023",
         type: "TYPE DESIGN",
+        date: '17-July-2023 to 23-July-2023',
+
+        pos: "mid",
+        image:
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW2.webp",
+      },
+      {
+        name: "European Hyperloop Week 2023",
+        type: "TYPE DESIGN",
+        date: '17-July-2023 to 23-July-2023',
+
         pos: "end",
         image:
-          "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW3.webp",
       },
     ];
     setProjects(projectsData);
@@ -113,23 +131,49 @@ const Home = () => {
     // Your blog posts array here
     const blogPostsData = [
       {
-        title: "BLOG POST ONE",
-        time: "3 MIN",
+        title: "Hon’ble Union Finance Minister praises our work!",
+        time: "Read More...",
         image:
-          "https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/blog/nirmalasitharamantweet.png",
       },
       {
-        title: "BLOG POST TWO",
-        time: "4 MIN",
+        title: "Avishkar Hyperloop at the EHW 2023",
+        time: "Read More...",
         image:
-          "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/blog/ehw2023fullteam.jpg",
       },
       {
-        title: "BLOG POST THREE",
-        time: "5 MIN",
+        title: "Hon'ble Prime Minister meets Avishkar Hyperloop!",
+        time: "Read More...",
         image:
-          "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://avishkarhyperloop.com/images/Index%20Page%20Carousel/PM2.jpeg",
       },
+      {
+        title: "Wrapping up 6.0 : The future lies ahead",
+        time: "Read More...",
+        image:
+          "https://avishkarhyperloop.com/images/team22new.jpg",
+      },
+      {
+        title: "Minister of Railways visits Avishkar Hyperloop!",
+        time: "Read More...",
+        image:
+          "https://avishkarhyperloop.com/images/blog/railwayteam.jpg",
+      },
+      {
+        title: "The Yearly Roundup: 2021",
+        time: "Read More...",
+        image:
+          "https://avishkarhyperloop.com/images/pod%20run%20(1).gif",
+      },
+      {
+        title: "The Hyperloop and the Carbon",
+        time: "Read More...",
+        image:
+          "https://avishkarhyperloop.com/images/blog/Emission.jpg",
+      },
+
+
     ];
     setBlogPosts(blogPostsData);
   };
@@ -149,9 +193,9 @@ const Home = () => {
   const animateProjects = () => {
     const offsetTop = projectsStickyRef.current.parentElement.offsetTop;
     let percentage = ((mainRef.current.scrollTop - offsetTop) / window.innerHeight) * 100;
-    
+
     percentage = percentage <= 0 ? 0 : percentage > limit.current ? limit.current : percentage;
-    
+
     console.log(percentage, limit.current)
     let projectTargetX = percentage;
     projectCurrentX.current = lerp(
@@ -204,8 +248,8 @@ const Home = () => {
       window.innerWidth <= 600
         ? percentages.current.small
         : window.innerWidth <= 1100
-        ? percentages.current.medium
-        : percentages.current.large;
+          ? percentages.current.medium
+          : percentages.current.large;
   };
 
   const avishkar = "Avishkar".split("");
@@ -239,11 +283,12 @@ const Home = () => {
           <section id="about">
             <div className="about__container">
               <div className="about__text">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  aut in odio iure laudantium vitae nemo impedit, tempore,
-                  adipisci dicta sint provident architecto et voluptatum dolor
-                  repudiandae beatae facilis corporis.
+                <p className=" line-clamp-4">
+                  The team started as a student project at the Center for Innovation, IIT Madras. In the short time since inception, we proved our mettle at international Hyperloop competitions. We were the only Asian team at the finale of SpaceX Hyperloop Pod Competition 2019. Then, competing virtually in European Hyperloop Week 2021, we won the 'Most Scalable Pod Design' award by Zeleros Hyperloop and were in the global top-5 in Mechanical, Propulsion and Levitation award categories. We built our latest pod Avishkar 5.0, during the pandemic through relentless effort. Avishkar 5.0 Pod is equipped with many novel technologies that we built in-house from scratch and emerged in the global top 5 in 3 categories - Electrical Subsystem, Traction Subsystem and The Complete Pod Category in the European Hyperloop Week 2022. This year, through meticulous planning and design, we built the Pod 6.0, Garuda. Improving on the existing technologies through various testing methodologies, incorporated with other intricate technologies with immaculate provisions, Garuda stands as Asia's most advanced pod. We emerged Top-3 in the Socio-Economic Aspects of Hyperloop Development Category, Top-5 in the Guidance Category and Top-6 in the Sense and Control Category in the European Hyperloop Week 2023 held at Edinburgh, Scotland.
+
+                  Currently, we have expanded our horizons and are focusing on taking a giant leap. We are aiming to build a 400m long vacuum tube facility at IIT Madras and establish a Centre for Hyperloop Excellence at IIT Madras in collaboration with the Indian Railways and L&T Constructions. We also intend to conduct a Global Hyperloop Competition at IIT Madras at the 400m vacuum tube facility making India a global center for Hyperloop Research.
+
+                  To understand in-detail how safe the hyperloop will work in real-life and it's socio-economic implications, read our latest research document here. You are invited to read through our latest discoveries in Hyperloop technical advancements here. Remember to share your insights with us!
                 </p>
               </div>
             </div>
@@ -258,7 +303,7 @@ const Home = () => {
                 muted
                 loop
                 playsInline
-                src="https://avishkarhyperloop.com/videos/VfxVideo.mp4"
+                src="http://avishkarhyperloop.com/videos/VfxVideo.mp4"
               ></video>
               <div className="video__text__overlay">
                 <h2 className="text__header__left" ref={headerLeftRef}>
@@ -285,7 +330,7 @@ const Home = () => {
                       </div>
                       <div className="project__details">
                         <p>{project.name}</p>
-                        <p>{project.type}</p>
+                        <p>{project.date}</p>
                       </div>
                     </div>
                   ))}
@@ -309,7 +354,7 @@ const Home = () => {
                   </div>
                   <div className="post__details">
                     <p>{post.title}</p>
-                    <p>{post.time}</p>
+                    <button>{post.time}</button>
                   </div>
                 </div>
               </div>
