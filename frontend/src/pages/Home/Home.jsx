@@ -16,6 +16,7 @@ const Home = () => {
   const dContainerRef = useRef(null);
   const leftTextRef = useRef(null);
   const rightTextRef = useRef(null);
+  const rightTextRef2 = useRef(null);
   // const textRevealsRefs = useRef([]);
 
   const [projects, setProjects] = useState([]);
@@ -55,7 +56,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "start",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM1.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM1.webp",
       },
       {
         name: "Hon'ble Prime Minister interacts with the team!",
@@ -63,7 +64,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "mid",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM2.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM2.webp",
       },
       {
         name: "Hon'ble Prime Minister interacts with the team!",
@@ -71,7 +72,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "end",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/PM3.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM3.webp",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -79,7 +80,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "mid",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit1.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit1.webp",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -87,7 +88,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "end",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit2.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit2.webp",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -95,7 +96,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "mid",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit3.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit3.webp",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -103,7 +104,7 @@ const Home = () => {
         date: '17-July-2023 to 23-July-2023',
         pos: "start",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW1.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW1.webp",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -112,7 +113,7 @@ const Home = () => {
 
         pos: "mid",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW2.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW2.webp",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -121,7 +122,7 @@ const Home = () => {
 
         pos: "end",
         image:
-          "https://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW3.webp",
+          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW3.webp",
       },
     ];
     setProjects(projectsData);
@@ -134,43 +135,43 @@ const Home = () => {
         title: "Hon’ble Union Finance Minister praises our work!",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/blog/nirmalasitharamantweet.png",
+          "http://avishkarhyperloop.com/images/blog/nirmalasitharamantweet.png",
       },
       {
         title: "Avishkar Hyperloop at the EHW 2023",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/blog/ehw2023fullteam.jpg",
+          "http://avishkarhyperloop.com/images/blog/ehw2023fullteam.jpg",
       },
       {
         title: "Hon'ble Prime Minister meets Avishkar Hyperloop!",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/Index%20Page%20Carousel/PM2.jpeg",
+          "http://avishkarhyperloop.com/images/Index%20Page%20Carousel/PM2.jpeg",
       },
       {
         title: "Wrapping up 6.0 : The future lies ahead",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/team22new.jpg",
+          "http://avishkarhyperloop.com/images/team22new.jpg",
       },
       {
         title: "Minister of Railways visits Avishkar Hyperloop!",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/blog/railwayteam.jpg",
+          "http://avishkarhyperloop.com/images/blog/railwayteam.jpg",
       },
       {
         title: "The Yearly Roundup: 2021",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/pod%20run%20(1).gif",
+          "http://avishkarhyperloop.com/images/pod%20run%20(1).gif",
       },
       {
         title: "The Hyperloop and the Carbon",
         time: "Read More...",
         image:
-          "https://avishkarhyperloop.com/images/blog/Emission.jpg",
+          "http://avishkarhyperloop.com/images/blog/Emission.jpg",
       },
 
 
@@ -236,6 +237,7 @@ const Home = () => {
     textTrans = textTrans < 0 ? 0 : textTrans;
     leftTextRef.current.style.transform = `translateX(${-textTrans}px)`;
     rightTextRef.current.style.transform = `translateX(${textTrans}px)`;
+    rightTextRef2.current.style.transform = `translateX(${textTrans}px)`;
   };
 
   const animate = () => {
@@ -362,22 +364,35 @@ const Home = () => {
           </section>
           <section id="circle__section" ref={circleSectionRef}>
             <div className="circle__sticky">
-              <h2>TBA</h2>
+              <p className="container text-xl text-center">
+                <div className="text-center font-semibold text-4xl py-6">Overview</div>
+                TBAThe team started as a student project at the Center for Innovation, IIT Madras. In the short time since inception, we proved our mettle at international Hyperloop competitions. We were the only Asian team at the finale of SpaceX Hyperloop Pod Competition 2019. Then, competing virtually in European Hyperloop Week 2021, we won the 'Most Scalable Pod Design' award by Zeleros Hyperloop and were in the global top-5 in Mechanical, Propulsion and Levitation award categories. We built our latest pod Avishkar 5.0, during the pandemic through relentless effort. Avishkar 5.0 Pod is equipped with many novel technologies that we built in-house from scratch and emerged in the global top 5 in 3 categories - Electrical Subsystem, Traction Subsystem and The Complete Pod Category in the European Hyperloop Week 2022. This year, through meticulous planning and design, we built the Pod 6.0, Garuda. Improving on the existing technologies through various testing methodologies, incorporated with other intricate technologies with immaculate provisions, Garuda stands as Asia's most advanced pod. We emerged Top-3 in the Socio-Economic Aspects of Hyperloop Development Category, Top-5 in the Guidance Category and Top-6 in the Sense and Control Category in the European Hyperloop Week 2023 held at Edinburgh, Scotland.
+
+                Currently, we have expanded our horizons and are focusing on taking a giant leap. We are aiming to build a 400m long vacuum tube facility at IIT Madras and establish a Centre for Hyperloop Excellence at IIT Madras in collaboration with the Indian Railways and L&T Constructions. We also intend to conduct a Global Hyperloop Competition at IIT Madras at the 400m vacuum tube facility making India a global center for Hyperloop Research.
+
+                To understand in-detail how safe the hyperloop will work in real-life and it's socio-economic implications, read our latest research document here. You are invited to read through our latest discoveries in Hyperloop technical advancements here. Remember to share your insights with us!
+              </p>
               <div className="circle__container">
                 <div className="circle" ref={circleRef}></div>
               </div>
             </div>
           </section>
           <section id="discover" ref={dContainerRef}>
-            <div className="discover__container">
-              <p className="text__left" ref={leftTextRef}>
-                LOREM IPSUM IN SDSTH THEE FRISO
+            <div className="discover__container space-y-4">
+              <p className="text__right max-w-6xl text-center" ref={rightTextRef2}>
+                <div className=" text-black text-4xl font-medium text-center">HYPERLOOP</div>
               </p>
-              <p className="text__right" ref={rightTextRef}>
-                LOREM XUM VOL NI IAJAKIHSNA.
+              <p className="text__left space-y-3" ref={leftTextRef}>
+
+                <img className="h-[25rem]" src="http://avishkarhyperloop.com/images/Indexphpwebpfiles/team%20n%20musk.webp" alt="" />
+              </p>
+              <p className="text__right max-w-6xl text-center" ref={rightTextRef}>
+                Elon Musk, founder of Tesla and SpaceX, unveiled the idea of Hyperloop to the World through a White Paper - Hyperloop Alpha. It is the fifth mode of transportation that moves freight and people quickly, safely and directly from the origin to destination. Passengers or cargos are loaded into the Hyperloop pod and accelerated gradually via electric propulsion through a low-pressure tube. The proposed Hyperloop model can achieve a top speed of over 1200 kmph. It is completely autonomous, safe, clean and enclosed. More importantly, Hyperloop is environment friendly and doesn't call for much maintenance too. Hyperloop has been "open-sourced" by Elon Musk and SpaceX to attract innovations and improvements in the concept, thus optimising the technology and bringing out the better version of itself.
               </p>
             </div>
           </section>
+
+
         </div>
       </main>
     </div>

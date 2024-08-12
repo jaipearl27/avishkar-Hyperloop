@@ -1,26 +1,26 @@
-:root{
+:root {
   --max-width: 1440px;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
 
-html, body{
+html,
+body {
   background-color: #000000;
   overscroll-behavior: none;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
-
-.line__container{
+.line__container {
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,64 +32,62 @@ html, body{
   overflow: hidden;
 }
 
-.separator{
+.separator {
   position: absolute;
   width: 1px;
   height: 100%;
   background: rgba(255, 255, 255, 0.149);
 }
 
-.separator:nth-child(1){
-  left: 25%
+.separator:nth-child(1) {
+  left: 25%;
 }
 
-.separator:nth-child(2){
-  left: 50%
+.separator:nth-child(2) {
+  left: 50%;
 }
 
-.separator:nth-child(3){
-  left: 75%
+.separator:nth-child(3) {
+  left: 75%;
 }
 
-main{
+main {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
 }
 
-.scroll__container{
+.scroll__container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-section{
+section {
   position: relative;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.text__reveal{
+.text__reveal {
   line-height: 1;
   overflow: hidden;
   font-size: clamp(2rem, 20cqi, 20rem);
 }
 
-.text__reveal span{
+.text__reveal span {
   display: inline-block;
   transform: translateY(110%);
-  transition: .5s;
+  transition: 0.5s;
 }
-
 
 /* Hero */
 
-#hero{
+#hero {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -98,8 +96,7 @@ section{
   width: 100%;
 }
 
-
-.hero__container{
+.hero__container {
   height: 100%;
   width: 100%;
   max-width: var(--max-width);
@@ -110,25 +107,24 @@ section{
   gap: 80px;
 }
 
-.hero__title{
+.hero__title {
   overflow: hidden;
 }
 
-.hero__title__header{
+.hero__title__header {
   font-size: clamp(2rem, 20cqi, 20rem);
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
   margin-bottom: 2rem;
 }
 
 /* About section */
 
-#about{
+#about {
   display: flex;
   justify-content: center;
-
 }
 
-.about__container{
+.about__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,54 +132,52 @@ section{
   max-width: var(--max-width);
   height: 100%;
 }
-.about__text{
+.about__text {
   width: 45%;
   margin: auto;
   text-align: center;
   text-transform: uppercase;
   text-wrap: balance;
   font-size: 1.4rem;
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
-
 
 /* Video */
 
-#video{
+#video {
   display: flex;
   justify-content: center;
   height: 200%;
 }
 
-.shim{
+.shim {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
-
 }
 
-.video__sticky{
+.video__sticky {
   position: sticky;
   top: 0;
   width: 100%;
   height: 50%;
 }
 
-.main__video{
+.main__video {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
-  transform: scale(.5);
+  transform: scale(0.5);
   will-change: transform;
 }
 
-.video__text__overlay{
+.video__text__overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,29 +189,28 @@ section{
   overflow: hidden;
 }
 
-
 /* Projects  */
 
-#projects{
+#projects {
   position: relative;
   height: 200%;
 }
 
-.projects__sticky{
+.projects__sticky {
   position: sticky;
   top: 0;
   width: 100%;
   height: 50%;
 }
 
-.slider__container{
+.slider__container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.projects__slider{
+.projects__slider {
   height: 100%;
   display: flex;
   width: min-content;
@@ -225,7 +218,7 @@ section{
   will-change: transform;
 }
 
-.project{
+.project {
   position: relative;
   width: 25vw;
   height: 100%;
@@ -234,14 +227,14 @@ section{
   flex-direction: column;
 }
 
-.image__container{
+.image__container {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
-.project__image{
+.project__image {
   position: relative;
   width: 100%;
   height: 100%;
@@ -250,42 +243,40 @@ section{
   filter: grayscale(50%);
 }
 
-.start{
+.start {
   justify-content: flex-start;
-
 }
 
-.mid{
+.mid {
   justify-content: center;
 }
-.end{
+.end {
   justify-content: end;
 }
 
-.project__details{
+.project__details {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-top: 1rem;
 }
 
-.project__details p{
-  font-size: .8rem ;
+.project__details p {
+  font-size: 0.8rem;
 }
 
 /* Blog */
 
-#blog{
+#blog {
   height: 400%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .blog__hero,
-.blog__post{
+.blog__post {
   width: 100%;
   height: 25%;
   display: flex;
@@ -297,8 +288,7 @@ section{
   overflow: hidden;
 }
 
-
-.post{
+.post {
   position: relative;
   width: 50%;
   padding: 1rem;
@@ -308,14 +298,14 @@ section{
   will-change: transform;
 }
 
-.post__image__container{
+.post__image__container {
   overflow: hidden;
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
-.blog__post__img{
+.blog__post__img {
   position: relative;
   width: 100%;
   height: 100%;
@@ -323,7 +313,7 @@ section{
   object-position: center;
 }
 
-.post__details{
+.post__details {
   display: flex;
   width: 100%;
   margin-top: 1rem;
@@ -331,18 +321,17 @@ section{
 }
 
 .post__details p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 /* Cirlce */
 
-#circle__section{
+#circle__section {
   position: relative;
   height: 200%;
-
 }
 
-.circle__sticky{
+.circle__sticky {
   position: sticky;
   top: 0;
   width: 100%;
@@ -352,7 +341,7 @@ section{
   align-items: center;
 }
 
-.circle__container{
+.circle__container {
   position: absolute;
   top: 0;
   left: 0;
@@ -361,7 +350,7 @@ section{
   overflow: hidden;
 }
 
-.circle{
+.circle {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -369,26 +358,23 @@ section{
   width: 150vmax;
   height: 150vmax;
   background-color: white;
-  border-radius: 50% ;
-
+  border-radius: 50%;
 }
 
-.circle__sticky h2{
+.circle__sticky p {
   font-size: clamp(2rem, 20cqi, 20rem);
   color: #000000;
   z-index: 1;
-
 }
-
 
 /* Discover */
 
-#discover{
+#discover {
   background-color: white;
   height: 100%;
 }
 
-.discover__container{
+.discover__container {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -396,7 +382,7 @@ section{
   flex-direction: column;
   overflow: hidden;
 }
-.discover__container p{
+.discover__container p {
   color: black;
   will-change: transform;
   font-size: 1.4rem;
@@ -404,7 +390,7 @@ section{
 
 /* End video */
 
-#end__video{
+#end__video {
   position: relative;
   background-color: white;
   display: flex;
@@ -412,14 +398,13 @@ section{
   height: 100%;
 }
 
-.end__video__container{
+.end__video__container {
   position: relative;
   width: 100%;
   height: 100%;
-
 }
 
-.end__video{
+.end__video {
   position: absolute;
   top: 0;
   width: 100%;
@@ -429,7 +414,7 @@ section{
 
 /* Footer */
 
-#footer{
+#footer {
   height: 50%;
   background-color: white;
   display: flex;
@@ -438,7 +423,7 @@ section{
   overflow: hidden;
 }
 
-.footer__container{
+.footer__container {
   width: 100%;
   max-width: var(--max-width);
   display: flex;
@@ -446,49 +431,45 @@ section{
   align-items: center;
 }
 
-.footer__title h2 span{
+.footer__title h2 span {
   color: black;
   display: inline-block;
-  transition: .5s;
+  transition: 0.5s;
   overflow: hidden;
-
 }
 
-
-
-
-@media only screen and (max-width: 1100px){
-  p{
-      font-size: .8rem;
+@media only screen and (max-width: 1100px) {
+  p {
+    font-size: 0.8rem;
   }
 
-  #projects{
-      height: 400%;
+  #projects {
+    height: 400%;
   }
 
-  .projects__sticky{
-      height: 25%;
+  .projects__sticky {
+    height: 25%;
   }
 
   .project {
-      width: 50vw;
+    width: 50vw;
   }
 }
 
-@media only screen and (max-width: 600px){
-  #projects{
-      height: 800%;
+@media only screen and (max-width: 600px) {
+  #projects {
+    height: 800%;
   }
 
-  .projects__sticky{
-      height: 12.5%;
+  .projects__sticky {
+    height: 12.5%;
   }
 
   .project {
-      width:100vw ;
+    width: 100vw;
   }
 
-  .post{
-      width: 80%;
+  .post {
+    width: 80%;
   }
 }

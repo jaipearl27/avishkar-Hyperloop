@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     const navItem1 = [
@@ -34,7 +35,7 @@ const Header = () => {
         },
         {
             name: 'Contact Us',
-            path: ''
+            path: 'contactUs'
         },
         {
             name: 'Ticket Calculator',
@@ -43,19 +44,21 @@ const Header = () => {
     ]
     return (
         <nav className='w-full fixed top-4 z-50'>
-            <div className='max-w-7xl mx-auto bg-white shadow-lg shadow-white/60  py-2 rounded-full flex items-center justify-evenly '>
+            <div className='max-w-5xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-1 shadow-white/60  rounded-full flex items-center justify-evenly '>
                 <div className='flex'>
                     {
                         navItem1?.map(item => {
-                            return <div className='text-black px-6 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                            return <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
                         })
                     }
                 </div>
-                <img className='h-12' src="https://avishkarhyperloop.com/images/Indexphpwebpfiles/logo.webp" alt="" />
+                <Link to='/'>
+                    <img className='h-10' src="http://avishkarhyperloop.com/images/Indexphpwebpfiles/logo.webp" alt="" />
+                </Link>
                 <div className='flex'>
                     {
                         navItem2?.map(item => {
-                            return <div className='text-black px-6 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                            return <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
                         })
                     }
                 </div>

@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 const App = () => {
 
@@ -21,6 +22,10 @@ const App = () => {
         {
           path: "/*",
           element: <NotFound />,
+        },
+        {
+          path: "/contactUs",
+          element: <ContactUs />,
         },
       ],
     },
