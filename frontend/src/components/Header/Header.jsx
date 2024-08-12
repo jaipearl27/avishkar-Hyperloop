@@ -5,41 +5,41 @@ const Header = () => {
     const navItem1 = [
         {
             name: 'Media',
-            path: ''
+            path: '#'
         },
         {
             name: 'Pod',
-            path: ''
+            path: '#'
         },
         {
             name: 'Infrastructure',
-            path: ''
+            path: '#'
         },
         {
             name: 'Research',
-            path: ''
+            path: '#'
         },
     ]
     const navItem2 = [
         {
             name: 'Partners',
-            path: ''
+            path: '#'
         },
         {
             name: 'Blog',
-            path: ''
+            path: '#'
         },
         {
             name: 'Team',
-            path: ''
+            path: '#'
         },
         {
             name: 'Contact Us',
-            path: 'contactUs'
+            path: '/contactUs'
         },
         {
             name: 'Ticket Calculator',
-            path: ''
+            path: '#'
         },
     ]
     return (
@@ -58,7 +58,9 @@ const Header = () => {
                 <div className='flex'>
                     {
                         navItem2?.map(item => {
-                            return <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                            return <Link to={item.path}>
+                                <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                            </Link>
                         })
                     }
                 </div>
