@@ -44,11 +44,11 @@ const Header = () => {
     ]
     return (
         <nav className='w-full fixed top-4 z-50'>
-            <div className='max-w-5xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-1 shadow-white/60  rounded-full flex items-center justify-evenly '>
+            <div className='max-w-6xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-2 rounded-full flex items-center justify-evenly '>
                 <div className='flex'>
                     {
                         navItem1?.map(item => {
-                            return <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                            return <div className='text-black px-3 border-b-2 border-transparent hover:border-stone-950 !font-medium hover:text-stone-950 cursor-pointer'>{item.name}</div>
                         })
                     }
                 </div>
@@ -59,7 +59,7 @@ const Header = () => {
                     {
                         navItem2?.map(item => {
                             return <Link to={item.path}>
-                                <div className='text-black px-3 py-3 !font-medium hover:text-indigo-600 cursor-pointer'>{item.name}</div>
+                                <div className='text-black px-3 border-b-2 border-transparent hover:border-stone-950 !font-medium hover:text-stone-950 cursor-pointer'>{item.name}</div>
                             </Link>
                         })
                     }
