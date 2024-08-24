@@ -44,7 +44,7 @@ const Header = () => {
     ]
     return (
         <nav className='w-full fixed top-4 z-50'>
-            <div className='max-w-6xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-2 rounded-full flex items-center justify-evenly '>
+            <div className='max-w-5xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-2 rounded-full flex items-center justify-evenly '>
                 <div className='flex'>
                     {
                         navItem1?.map(item => {
