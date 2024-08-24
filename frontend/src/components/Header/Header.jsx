@@ -15,10 +15,10 @@ const Header = () => {
             name: 'Infrastructure',
             path: '#'
         },
-        {
-            name: 'Research',
-            path: '#'
-        },
+        // {
+        //     name: 'Research',
+        //     path: '#'
+        // },
     ]
     const navItem2 = [
         {
