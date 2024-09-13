@@ -478,3 +478,50 @@ section {
     width: 80%;
   }
 }
+
+
+/* ---------- AV ----------- */
+.pods {
+  background-image: url(../../../public/images/podsBannerBg.png);
+  background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.podsbanner-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  object-fit: none;
+}
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, 100%);
+  width: 50%;
+  /* background-color: #fff; */
+  padding: 40px 15px;
+  text-align: center;
+}
+.banner-content h1 {
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 42px;
+  font-weight: 700; 
+  line-height: 52px;
+}
+.banner-content p {
+  font-size: 20px;
+  color: #fff;
+  background-color: red;
+  margin-bottom: 15px;
+}

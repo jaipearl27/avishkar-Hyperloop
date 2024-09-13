@@ -56,7 +56,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "start",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM1.webp",
+          "/images/honable-prime-minister.jpg",
       },
       {
         name: "Hon'ble Prime Minister interacts with the team!",
@@ -64,7 +64,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "mid",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM2.webp",
+          "/images/2nd.jpg",
       },
       {
         name: "Hon'ble Prime Minister interacts with the team!",
@@ -72,7 +72,7 @@ const Home = () => {
         date: '08-Apr-2023',
         pos: "end",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/PM3.webp",
+          "/images/Co-image.jpg",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -80,7 +80,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "mid",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit1.webp",
+          "/images/europeHyperloop.jpg",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -88,7 +88,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "end",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit2.webp",
+         "/images/honable-prime-minister.jpg",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -96,7 +96,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "mid",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/Daimlervisit3.webp",
+         "/images/Co-image.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -104,7 +104,7 @@ const Home = () => {
         date: '17-July-2023 to 23-July-2023',
         pos: "start",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW1.webp",
+        "/images/europeHyperloop.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -113,7 +113,7 @@ const Home = () => {
 
         pos: "mid",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW2.webp",
+         "/images/honable-prime-minister.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -122,7 +122,7 @@ const Home = () => {
 
         pos: "end",
         image:
-          "http://avishkarhyperloop.com/images/Indexphpwebpfiles/EHW3.webp",
+         "/images/europeHyperloop.jpg",
       },
     ];
     setProjects(projectsData);
@@ -135,43 +135,43 @@ const Home = () => {
         title: "Hon’ble Union Finance Minister praises our work!",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/blog/nirmalasitharamantweet.png",
+          "/images/Co-image.jpg",
       },
       {
         title: "Avishkar Hyperloop at the EHW 2023",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/blog/ehw2023fullteam.jpg",
+        "/images/europeHyperloop.jpg",
       },
       {
         title: "Hon'ble Prime Minister meets Avishkar Hyperloop!",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/Index%20Page%20Carousel/PM2.jpeg",
+        "/images/honable-prime-minister.jpg",
       },
       {
         title: "Wrapping up 6.0 : The future lies ahead",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/team22new.jpg",
+          "/images/europeHyperloop.jpg",
       },
       {
         title: "Minister of Railways visits Avishkar Hyperloop!",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/blog/railwayteam.jpg",
+        "/images/honable-prime-minister.jpg",
       },
       {
         title: "The Yearly Roundup: 2021",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/pod%20run%20(1).gif",
+          "/images/europeHyperloop.jpg",
       },
       {
         title: "The Hyperloop and the Carbon",
         time: "Read More...",
         image:
-          "http://avishkarhyperloop.com/images/blog/Emission.jpg",
+        "/images/Co-image.jpg",
       },
 
 
