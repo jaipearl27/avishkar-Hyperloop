@@ -501,7 +501,7 @@ section {
 }
 .banner-content {
   position: absolute;
-  top: 50%;
+  top: 5%;
   left: 0;
   transform: translate(50%, 100%);
   width: 50%;
@@ -510,7 +510,7 @@ section {
   text-align: center;
 }
 .banner-content h1 {
-  background-color: red;
+  background-color: rgba(177, 169, 169, 0.418);
   padding: 10px;
   display: inline-block;
   text-align: center;
@@ -522,6 +522,42 @@ section {
 .banner-content p {
   font-size: 20px;
   color: #fff;
-  background-color: red;
+  background-color: rgba(177, 169, 169, 0.418);
   margin-bottom: 15px;
+}
+.garudaPods {
+  background-color: #f4f5f6;
+  padding: 50px 30px;
+}
+.garudaPods h2 {
+  color: #0bb341;
+}
+.garudaPods p {
+  color: #1b1c1d;
+  font-size: 18px;
+    line-height: 26px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.schematicsSlider {
+  width: 100%;
 }
