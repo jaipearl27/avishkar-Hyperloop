@@ -561,3 +561,41 @@ section {
 .schematicsSlider {
   width: 100%;
 }
+.collapsing {
+  height: auto !important;
+  overflow: auto !important;
+  transition: 0.35s ease !important;
+}
+.podsSchematics {
+  background: #f4f5f6;
+  padding: 25px;
+  color: #1b1c1d;
+}
+.schemanticsAccordions {
+  border: 1px solid #d6d6d6;
+}
+.headingAccord {
+  padding: 16px 20px;
+  background-color: #94b8d7;
+  text-align: left;
+  color: #1b1c1d;
+  font-weight: 700;
+}
+.pods-versions {
+  width: 300px;
+  display: inline-flex;
+  border: 1px solid #f4f5f6;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.pods-versions:hover {
+  box-shadow: rgb(203 190 190 / 71%) 5px 3px 20px;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #1b1c1d;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}

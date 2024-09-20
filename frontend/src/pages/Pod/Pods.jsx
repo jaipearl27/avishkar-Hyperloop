@@ -1,11 +1,49 @@
-import React,{ useRef, useState }from 'react'
+import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import Accordions from '../../components/Accordions/Accordions';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
 
 const Pods = () => {
+    const socialLinks = [
+      { url: 'https://instagram.com', iconClass: 'fa-brands fa-instagram' },
+      { url: 'https://facebook.com', iconClass: 'fa-brands fa-facebook' },
+      { url: 'https://twitter.com', iconClass: 'fa-brands fa-twitter' },
+      { url: 'https://twitter.com', iconClass: 'fa-brands fa-linkedin' },
+      { url: 'https://twitter.com', iconClass: 'fa-brands fa-youtube' },
+    ];
+
+    const accordionData = [
+      {
+        eventKey: "0",
+        header: "Levitation",
+        body: "Half-bridge IGBT based DC-DC converter to control the EMS with max power capability of 180 kVA. The vertical EMS (x4) is designed to lift 1240 N each at 13 A. The pod is also equipped with lateral EMS guidance which can provide lateral stability to the pod with just 6A current."
+      },
+      {
+        eventKey: "1",
+        header: "Embedded Systems",
+        body: "Robust on-pod communication following CAN 2.0 protocol and a master-slave architecture that allows for time-controlled triggering of messages..."
+      },
+      {
+        eventKey: "2",
+        header: "Power Electronics",
+        body: "An impressive 3kWhr LFP battery pack assembled-in house with max pulse discharge current of 480A and unmatched abuse tolerance owing to cylindrical cells. The pack is integrated with a scalable BMS that ensures healthy operation of the cells. The pod is also equipped with IGBT based Inverter to power the DSLIM with max power capability of over 400 kVA. The inverter is used to generate 3-phase Sinusoidal Waveform from a DC Voltage to drive the Linear Induction Motor."
+      },
+      {
+        eventKey: "3",
+        header: "Traction",
+        body: "The Double Sided Linear Induction Motor, which integrates v/f control technology, resulting in a remarkable 25% increase in acceleration performance. A PI controller is implemented to minimise steady state error. The pod primarily brakes via DC Injection Braking which imparts a substantial braking force of 0.4 kN. Mechanical friction brakes activate in the event of an emergency."
+      },
+      {
+        eventKey: "4",
+        header: "Mechanical",
+        body: "The chassis is a sandwich structure made of carbon fibre reinforced polymer layers (CFRP) with an Aluminium honeycomb core, making it lighter and durable - withstanding over 450 kg of load - being almost 2.4 times more optimised in weight. An inverted U shape chassis has been adopted to attain least possible deformations at critical air gaps, while maintaining a compact and space-efficient system."
+      },
+    ];
+
   return (
     <>
       <div className="space-y-5">
@@ -21,28 +59,68 @@ const Pods = () => {
           <p>Avishkar has been working on Hyperloop pod technologies for over 6 years now, and has been working relentlessly to develop scalable and frugal technologies for the Indian Hyperloop. Avishkar's pod Garuda is propelled by a Linear induction Motor designed completely in-house, which is also the pod’s primary mode of braking. The pod incorporates bidirectional run capabilities and EMS levitation with a high lift-to-weight ratio while still being extremely power efficient. The pod is controlled with autonomous embedded systems capable of speed and direction control and real-time data acquisition. This technological marvel will soon be tested inside our very own 400m vacuum tube facility, thereby proving the concept of Hyperloop.</p>
         </div>
       </div>
-      <div className='container mx-auto'>
+      <div className='container mx-auto py-5'>
         <div className="podsSchematics text-center flex flex-col items-center gap-y-10">
           <h2 className="font-bold text-4xl">Pod Schematics</h2>
-          <div className="schematicsSlider">
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-              <SwiperSlide>
-                <div className="slioder-content">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="slider-img">
-                        <img src="" alt="" />
-                      </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="schematicsSlider">
+                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                  <SwiperSlide>
+                    <div className="slider-img">
+                      <img src="/images/Levitation2.png" alt="" className='w-100' />
                     </div>
-                    <div className="col-md-6"></div>
-                  </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="slider-img">
+                      <img src="/images/Levitation1.png" alt="" className='w-100' />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="schemanticsAccordions">
+                <div className="headingAccord">
+                  Components
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-            </Swiper>
+                <Accordions accordionData={accordionData} />
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-4">
+            <Link href='#' className="pods-versions">
+              Pod 2.0
+            </Link>
+          </div>
+          <div className="col-md-4">
+            <Link href='#' className="pods-versions">
+              Pod 4.0
+            </Link>
+          </div>
+          <div className="col-md-4">
+            <Link href='#' className="pods-versions">
+              Pod 5.0
+            </Link>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div className="podFooter py-7">
+        <div className="container">
+          <ul className='d-flex justify-content-center align-items-center gap-5' >
+          {socialLinks.map((link, index) => (
+            <li key={index}>
+              <Link to={link.url}>
+                <i className={link.iconClass} style={{fontSize:"26px"}}></i>
+              </Link>
+            </li>
+          ))}
+          </ul>
         </div>
       </div>
     </>
