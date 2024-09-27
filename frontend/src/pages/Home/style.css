@@ -599,3 +599,19 @@ section {
 .accordion-button:focus {
   box-shadow: none;
 }
+.interviewBanner{
+  padding: 120px 30px 50px;
+  background-color: #f4f5f6;
+}
+.interviewBanner h2 {
+  color: #0bb341;
+}
+.interviewBanner p {
+  color: #1b1c1d;
+  font-size: 18px;
+    line-height: 26px;
+}
+img.feature-img {
+  max-width: 500px;
+  margin: auto;
+}
