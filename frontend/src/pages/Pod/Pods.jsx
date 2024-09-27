@@ -2,20 +2,13 @@ import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Accordions from '../../components/Accordions/Accordions';
+import Footer from '../../components/Footer/footer';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Link } from 'react-router-dom';
 
 
 const Pods = () => {
-    const socialLinks = [
-      { url: 'https://instagram.com', iconClass: 'fa-brands fa-instagram' },
-      { url: 'https://facebook.com', iconClass: 'fa-brands fa-facebook' },
-      { url: 'https://twitter.com', iconClass: 'fa-brands fa-twitter' },
-      { url: 'https://twitter.com', iconClass: 'fa-brands fa-linkedin' },
-      { url: 'https://twitter.com', iconClass: 'fa-brands fa-youtube' },
-    ];
-
     const accordionData = [
       {
         eventKey: "0",
@@ -110,19 +103,7 @@ const Pods = () => {
         </div>
       </div>
       <hr/>
-      <div className="podFooter py-7">
-        <div className="container">
-          <ul className='d-flex justify-content-center align-items-center gap-5' >
-          {socialLinks.map((link, index) => (
-            <li key={index}>
-              <Link to={link.url}>
-                <i className={link.iconClass} style={{fontSize:"26px"}}></i>
-              </Link>
-            </li>
-          ))}
-          </ul>
-        </div>
-      </div>
+      <Footer/>
     </>
   )
 }

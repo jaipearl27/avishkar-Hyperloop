@@ -8,7 +8,7 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Pods from "./pages/Pod/Pods";
 import Research from "./pages/Research/research";
 import Media from "./pages/Media/media";
-import Infrastructure from "./pages/Infrastructure/infrastructure";
+import Infrastructure from "./pages/Infrastructure/infrastructure"; 
 
 const App = () => {
 

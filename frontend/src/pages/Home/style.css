@@ -612,6 +612,32 @@ section {
     line-height: 26px;
 }
 img.feature-img {
-  max-width: 500px;
-  margin: auto;
+    max-width: 200px;
+    margin: auto;
+    height: 200px;
+    object-fit: contain;
+}
+.featureSlider h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.sub_footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+.research-banner {
+  background: url(/public/images/pg2.jpg) no-repeat fixed center bottom;
+  background-size: cover;
+  height: 100vh;
+}
+.accordion-body {
+  color: #111;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #ebebeb;
 }
