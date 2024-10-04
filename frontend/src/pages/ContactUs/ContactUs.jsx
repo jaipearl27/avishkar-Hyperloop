@@ -1,3 +1,4 @@
+import { useState } from "react";
 const ContactUs = () => {
 
     const contactMethods = [
@@ -28,14 +29,74 @@ const ContactUs = () => {
         },
     ]
 
+    // --------------- form validate ---------
+
+    const validate = () => {
+        const newErrors = {};
+
+        if (!formData.fullName.trim()) {
+            newErrors.fullName = "Full name is required";
+        }
+
+        if (!formData.email) {
+            newErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = "Email is invalid";
+        }
+
+        if (!formData.company.trim()) {
+            newErrors.company = "Company is required";
+        }
+
+        if (!formData.message.trim()) {
+            newErrors.message = "Message is required";
+        }
+
+        return newErrors;
+    };
+
+    const [formData, setFormData] = useState({
+        fullName: "",
+        email: "",
+        company: "",
+        message: ""
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+        } else {
+            setErrors({});
+            alert("Form submitted successfully!");
+            console.log("Form data:", formData);
+            setFormData({
+                fullName: "",
+                email: "",
+                company: "",
+                message: ""
+            });
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+    // --------------- form validate ---------
+
     return (
-        <main className="py-14 h-screen grid place-items-center">
+        <main className="py-24 h-screen grid place-items-center">
             <div className="  max-w-6xl w-full mx-auto px-4 text-gray-600 md:px-8">
+                <h3 className="text-white mb-5 font-semibold text-center text-3xl sm:text-4xl"> Contact</h3>
                 <div className=" mx-auto gap-12 justify-between lg:flex lg:max-w-none">
                     <div className="max-w-lg space-y-3">
-                        <h3 className="text-white font-semibold">
-                            Contact
-                        </h3>
                         <p className="text-white text-3xl font-semibold sm:text-4xl">
                             Let us know how we can help
                         </p>
@@ -57,49 +118,62 @@ const ContactUs = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex-1 mt-12 ">
-                        <form
-                            onSubmit={(e) => e.preventDefault()}
-                            className="space-y-5"
-                        >
+                    <div className="flex-1 formBg">
+                        <form onSubmit={handleSubmit} className="space-y-5">
                             <div>
-                                <label className="font-medium">
-                                    Full name
-                                </label>
+                                <label className="font-medium">Full name</label>
                                 <input
                                     type="text"
-                                    required
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#28B384] shadow-sm rounded-lg"
                                 />
+                                {errors.fullName && (
+                                    <p className="text-red-500 text-sm">{errors.fullName}</p>
+                                )}
                             </div>
                             <div>
-                                <label className="font-medium">
-                                    Email
-                                </label>
+                                <label className="font-medium">Email</label>
                                 <input
                                     type="email"
-                                    required
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#28B384] shadow-sm rounded-lg"
                                 />
+                                {errors.email && (
+                                    <p className="text-red-500 text-sm">{errors.email}</p>
+                                )}
                             </div>
                             <div>
-                                <label className="font-medium">
-                                    Company
-                                </label>
+                                <label className="font-medium">Company</label>
                                 <input
                                     type="text"
-                                    required
+                                    name="company"
+                                    value={formData.company}
+                                    onChange={handleChange}
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#28B384] shadow-sm rounded-lg"
                                 />
+                                {errors.company && (
+                                    <p className="text-red-500 text-sm">{errors.company}</p>
+                                )}
                             </div>
                             <div>
-                                <label className="font-medium">
-                                    Message
-                                </label>
-                                <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#28B384] shadow-sm rounded-lg"></textarea>
+                                <label className="font-medium">Message</label>
+                                <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#28B384] shadow-sm rounded-lg"
+                                />
+                                {errors.message && (
+                                    <p className="text-red-500 text-sm">{errors.message}</p>
+                                )}
                             </div>
                             <button
-                                className="w-full px-4 py-2 text-white font-medium bg-[#28B384] hover:bg-[#28B384] active:bg-[#28B384] rounded-lg duration-150"
+                                type="submit"
+                                className="w-full px-4 py-2 text-white font-medium bg-[#28B384] hover:bg-[#28B384] active:bg-[#28B384] rounded-pill duration-150"
                             >
                                 Submit
                             </button>

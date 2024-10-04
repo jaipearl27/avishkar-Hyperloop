@@ -9,6 +9,7 @@ import Pods from "./pages/Pod/Pods";
 import Research from "./pages/Research/research";
 import Media from "./pages/Media/media";
 import Infrastructure from "./pages/Infrastructure/infrastructure"; 
+import TicketCalculator from "./pages/TicketCalculator/ticket_calculator";
 
 const App = () => {
 
@@ -40,6 +41,10 @@ const App = () => {
         {
           path: "/contactUs",
           element: <ContactUs />,
+        },
+        {
+          path: "/ticketCalculator",
+          element: <TicketCalculator />,
         },
       ],
     },

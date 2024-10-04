@@ -641,3 +641,22 @@ img.feature-img {
   font-size: 14px;
   border: 1px solid #ebebeb;
 }
+.formBg {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+}
+.formBg label {
+  color: #1b1c1d;
+}
+.formBg select option {
+  color: #1b1c1d;
+}
+.formBg textarea {
+  color: #1b1c1d !important;
+}
+@media screen and (max-width: 991px) {
+  .formBg {
+    margin-top: 15px;
+  }
+}

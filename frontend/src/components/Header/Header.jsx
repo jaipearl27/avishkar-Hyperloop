@@ -39,7 +39,7 @@ const Header = () => {
         },
         {
             name: 'Ticket Calculator',
-            path: '#'
+            path: '/ticketCalculator'
         },
     ]
     return (
