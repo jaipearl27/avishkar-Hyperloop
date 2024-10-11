@@ -23,7 +23,7 @@ const Header = () => {
     const navItem2 = [
         {
             name: 'Partners',
-            path: '#'
+            path: '/partner'
         },
         {
             name: 'Blog',

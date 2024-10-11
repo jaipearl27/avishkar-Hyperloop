@@ -10,6 +10,7 @@ import Research from "./pages/Research/research";
 import Media from "./pages/Media/media";
 import Infrastructure from "./pages/Infrastructure/infrastructure"; 
 import TicketCalculator from "./pages/TicketCalculator/ticket_calculator";
+import Partner from "./pages/Partner/partner";
 
 const App = () => {
 
@@ -46,6 +47,10 @@ const App = () => {
           path: "/ticketCalculator",
           element: <TicketCalculator />,
         },
+        {
+          path: "/partner",
+          element: <Partner/>,
+        }
       ],
     },
     // {
