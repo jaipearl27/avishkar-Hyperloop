@@ -706,14 +706,15 @@ a.ViewMoreBtn {
 }
 .team_card_img {
   width: 200px;
-  height: auto;
+  height: 200px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .designation_heading {
   font-size: 30px;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 75px 0 30px;
   color: #ff2c20;
   font-weight: 700;
 }
@@ -741,8 +742,18 @@ a.ViewMoreBtn {
 .teams_Card_listing 
 .social_account {
     padding: 15px 20px;
-    background-color: #0d3cff;
+    /* background-color: #0d3cff; */
     border-radius: 50%;
+}
+.teams_Card_listing:hover .social_account {
+  background-color: #0d3cff;
+  transition: 0.7s ease-in;
+}
+.teams_cards_data {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .member_items {
   padding: 20px 30px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { teamSections } from '../../components/Team_Cards/teamSections';
 
 const team = () => {
 
@@ -15,7 +16,7 @@ const team = () => {
         "Traction",
         "Alumni",
     ];
-
+    // console.log(teamSections)
 
     return (
         <div>
@@ -39,23 +40,29 @@ const team = () => {
                     </div>
                 </div>
             </div>
-            <div className="team_details">
-                <div className="container">
-                    <div className="designation_heading">
-                        Team Heads
-                    </div>
-                    <div className="teams_Card_listing">
-                        <img src="/public/images/teams/Shri_Ashwini_Vaishnaw.webp" alt="" className='team_card_img' />
-                        <h5>Shri Ashwini Vaishnaw</h5>
-                        <p>Hon'ble Union Minister for Railways, Communications, Electronics and Information Technology of India</p>
-                        <div className="social_account">
-                            <i class="fa-brands fa-linkedin-in"></i>
+            {teamSections.length > 0 && teamSections.map((item, index) => (
+                <div className="team_details">
+                    <div className="container">
+                        <div className="designation_heading">
+                            {item?.heading}
+                        </div>
+                        <div className="teams_cards_data">
+                            {item?.members?.map((member, index) => (
+                                <div className="teams_Card_listing">
+                                    <img src={member?.image} alt={member.alt} className='team_card_img' />
+                                    <h5>{member?.name}</h5>
+                                    <p>{member?.position}</p>
+                                    <div className="social_account">
+                                        <a href=""><i className={member?.iconClass}></i></a>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                </div>
-            </div>
+                </div >
+            ))}
 
-        </div>
+        </div >
     )
 }
 
