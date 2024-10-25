@@ -31,7 +31,7 @@ const Header = () => {
         },
         {
             name: 'Team',
-            path: '#'
+            path: '/team'
         },
         {
             name: 'Contact Us',
@@ -51,7 +51,7 @@ const Header = () => {
                             <Link to={item.path}> <div className='text-black px-3 border-b-2 border-transparent hover:border-stone-950 !font-medium hover:text-stone-950 cursor-pointer'>{item.name}</div>
                             </Link>
                         )
-                           
+
                         )
                     }
                 </div>

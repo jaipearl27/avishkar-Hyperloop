@@ -635,6 +635,11 @@ img.feature-img {
   background-size: cover;
   height: 100vh;
 }
+.team-banner {
+  background: url(/public/images/our_team.jpg) no-repeat fixed center bottom;
+  background-size: cover;
+  height: 100vh;
+}
 .accordion-body {
   color: #111;
   text-align: left;
@@ -663,35 +668,88 @@ img.feature-img {
   display: flex;
   align-items: center;
 }
-.textBox {
-  width: 400px;
-  height: 400px;
-  background: blue;
-  position: absolute;
-  top: 0px;
-  display: none;
-}
 .imageBox {
   width: 400px;
-  height: 400px;
+  background-color: #fff;
 }
 
-.imageWithText:hover .textBox {
-  display: block;
-  transition: 3s ease-in-out;
+.textBox {
+  width: 60%;
+  display: flex;
 }
 
 .btmBorder {
-  border-bottom: 2px solid #04b481;
-  /* animation: loopingborder 1s linear infinite; */
+  border-left: 4px solid #04b481;
+  background-image:linear-gradient(135deg, #e8fff8 35%, #fff);
+  color: #111;
+  width: 50%;
 }
-@keyframes loopingborder {
-  0%{
-		width: 50%;
-	}
-	100%{
-		width: 100%;
-	}
+a.ViewMoreBtn {
+  padding: 5px 40px;
+  background-color: #04b481;
+  display: inline-block;
+  margin: 20px 0 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #111;
+  font-weight: 500;
+}
+.members_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+.team_members {
+  padding: 50px 30px;
+}
+.team_card_img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.designation_heading {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff2c20;
+  font-weight: 700;
+}
+.teams_Card_listing {
+  width: 25%;
+  padding: 25px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.teams_Card_listing h5 {
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+}
+.teams_Card_listing p {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+}
+.teams_Card_listing 
+.social_account {
+    padding: 15px 20px;
+    background-color: #0d3cff;
+    border-radius: 50%;
+}
+.member_items {
+  padding: 20px 30px;
+  border: 1px solid #ebebeb;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media screen and (max-width: 991px) {
   .formBg {

@@ -8,9 +8,10 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Pods from "./pages/Pod/Pods";
 import Research from "./pages/Research/research";
 import Media from "./pages/Media/media";
-import Infrastructure from "./pages/Infrastructure/infrastructure"; 
+import Infrastructure from "./pages/Infrastructure/infrastructure";
 import TicketCalculator from "./pages/TicketCalculator/ticket_calculator";
 import Partner from "./pages/Partner/partner";
+import Team from "./pages/Teams/team";
 
 const App = () => {
 
@@ -49,7 +50,11 @@ const App = () => {
         },
         {
           path: "/partner",
-          element: <Partner/>,
+          element: <Partner />,
+        },
+        {
+          path: "/team",
+          element: <Team />,
         }
       ],
     },
