@@ -27,7 +27,7 @@ const Header = () => {
         },
         {
             name: 'Blog',
-            path: '#'
+            path: '/blogs'
         },
         {
             name: 'Team',

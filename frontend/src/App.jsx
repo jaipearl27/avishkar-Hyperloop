@@ -12,6 +12,7 @@ import Infrastructure from "./pages/Infrastructure/infrastructure";
 import TicketCalculator from "./pages/TicketCalculator/ticket_calculator";
 import Partner from "./pages/Partner/partner";
 import Team from "./pages/Teams/team";
+import Blogs from "./pages/Blogs/blogs";
 
 const App = () => {
 
@@ -51,6 +52,10 @@ const App = () => {
         {
           path: "/partner",
           element: <Partner />,
+        },
+        {
+          path: "/blogs",
+          element: <Blogs />,
         },
         {
           path: "/team",

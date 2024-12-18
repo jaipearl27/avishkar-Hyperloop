@@ -40,10 +40,9 @@ const Home = () => {
     mainRef.current.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", setLimit);
 
-
     return () => {
-      mainRef.current.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", setLimit);
+      if (mainRef.current) mainRef.current.removeEventListener("scroll", handleScroll);
+      if (window) window.removeEventListener("resize", setLimit);
     };
   }, []);
 
@@ -88,7 +87,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "end",
         image:
-         "/images/honable-prime-minister.jpg",
+          "/images/honable-prime-minister.jpg",
       },
       {
         name: "The CEO of Daimler visits our workspace",
@@ -96,7 +95,7 @@ const Home = () => {
         date: '30-Mar-2023',
         pos: "mid",
         image:
-         "/images/Co-image.jpg",
+          "/images/Co-image.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -104,7 +103,7 @@ const Home = () => {
         date: '17-July-2023 to 23-July-2023',
         pos: "start",
         image:
-        "/images/europeHyperloop.jpg",
+          "/images/europeHyperloop.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -113,7 +112,7 @@ const Home = () => {
 
         pos: "mid",
         image:
-         "/images/honable-prime-minister.jpg",
+          "/images/honable-prime-minister.jpg",
       },
       {
         name: "European Hyperloop Week 2023",
@@ -122,7 +121,7 @@ const Home = () => {
 
         pos: "end",
         image:
-         "/images/europeHyperloop.jpg",
+          "/images/europeHyperloop.jpg",
       },
     ];
     setProjects(projectsData);
@@ -141,13 +140,13 @@ const Home = () => {
         title: "Avishkar Hyperloop at the EHW 2023",
         time: "Read More...",
         image:
-        "/images/europeHyperloop.jpg",
+          "/images/europeHyperloop.jpg",
       },
       {
         title: "Hon'ble Prime Minister meets Avishkar Hyperloop!",
         time: "Read More...",
         image:
-        "/images/honable-prime-minister.jpg",
+          "/images/honable-prime-minister.jpg",
       },
       {
         title: "Wrapping up 6.0 : The future lies ahead",
@@ -159,7 +158,7 @@ const Home = () => {
         title: "Minister of Railways visits Avishkar Hyperloop!",
         time: "Read More...",
         image:
-        "/images/honable-prime-minister.jpg",
+          "/images/honable-prime-minister.jpg",
       },
       {
         title: "The Yearly Roundup: 2021",
@@ -171,7 +170,7 @@ const Home = () => {
         title: "The Hyperloop and the Carbon",
         time: "Read More...",
         image:
-        "/images/Co-image.jpg",
+          "/images/Co-image.jpg",
       },
 
 
