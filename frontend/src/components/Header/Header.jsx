@@ -5,33 +5,33 @@ const Header = () => {
     const navItem1 = [
         {
             name: 'Media',
-            path: '#'
+            path: '/media'
         },
         {
             name: 'Pod',
-            path: '#'
+            path: '/pods'
         },
         {
             name: 'Infrastructure',
-            path: '#'
+            path: '/infrastructure'
         },
         {
             name: 'Research',
-            path: '#'
+            path: '/research'
         },
     ]
     const navItem2 = [
         {
             name: 'Partners',
-            path: '#'
+            path: '/partner'
         },
         {
             name: 'Blog',
-            path: '#'
+            path: '/blogs'
         },
         {
             name: 'Team',
-            path: '#'
+            path: '/team'
         },
         {
             name: 'Contact Us',
@@ -39,7 +39,7 @@ const Header = () => {
         },
         {
             name: 'Ticket Calculator',
-            path: '#'
+            path: '/ticketCalculator'
         },
     ]
     return (
@@ -47,9 +47,12 @@ const Header = () => {
             <div className='max-w-5xl mx-auto bg-white/80 backdrop-blur-md shadow-lg py-2 rounded-full flex items-center justify-evenly '>
                 <div className='flex'>
                     {
-                        navItem1?.map(item => {
-                            return <div className='text-black px-3 border-b-2 border-transparent hover:border-stone-950 !font-medium hover:text-stone-950 cursor-pointer'>{item.name}</div>
-                        })
+                        navItem1?.map(item => (
+                            <Link to={item.path}> <div className='text-black px-3 border-b-2 border-transparent hover:border-stone-950 !font-medium hover:text-stone-950 cursor-pointer'>{item.name}</div>
+                            </Link>
+                        )
+
+                        )
                     }
                 </div>
                 <Link to='/'>
